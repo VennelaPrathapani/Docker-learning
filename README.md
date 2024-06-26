@@ -8,17 +8,17 @@ Docker File Building from Scratch
 
     The FROM instruction specifies the base image that the container will be bult on top of. This instruction is typically the first one in a Dockerfile and is used to set the base image for the container. The format of the instruction is:
 
-    FROM <image>
+    FROM /<image/>
 
     Ex: FROM node:14-alpine3.16
 
-    This instruction tells Docker to use the node:14-alpine3.16 image as the base image for the container. To use a specific version or tag of an image you can use:<version> or:<tag> syntax.
+    This instruction tells Docker to use the node:14-alpine3.16 image as the base image for the container. To use a specific version or tag of an image you can use: /<version/> or:/<tag/> syntax.
 
 2. WORKDIR
 
     In a Dockerfile, the WORKDIR instruction sets the working directory for any command that follows it in the Dockerfile. This means that any commands that are run in the container will be executed relative to the specified directory. Below is the format of the instruction :
 
-    WORKDIR <directory>
+    WORKDIR /<directory/>
 
     Ex: WORKDIR /app
 
@@ -45,7 +45,7 @@ Docker File Building from Scratch
 
     Use the “RUN” instruction to execute commands that will run during the image build process.
 
-    RUN <command_name>
+    RUN /<command_name/>
 
     For example, to update the package manager and install a specific package, you would use the following command:
 
