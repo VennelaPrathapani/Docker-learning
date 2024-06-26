@@ -5,24 +5,29 @@ A Dockerfile is a script that contains instructions for building a customized do
 Docker File Building from Scratch
 
 1. FROM
+
     The FROM instruction specifies the base image that the container will be bult on top of. This instruction is typically the first one in a Dockerfile and is used to set the base image for the container. The format of the instruction is:
 
     FROM <image>
 
     Ex: FROM node:14-alpine3.16
+
     This instruction tells Docker to use the node:14-alpine3.16 image as the base image for the container. To use a specific version or tag of an image you can use:<version> or:<tag> syntax.
 
 2. WORKDIR
+
     In a Dockerfile, the WORKDIR instruction sets the working directory for any command that follows it in the Dockerfile. This means that any commands that are run in the container will be executed relative to the specified directory. Below is the format of the instruction :
 
     WORKDIR <directory>
 
     Ex: WORKDIR /app
+
     This instruction tells Docker to set the working directory of the container to /app . Any subsequent commands in the Dockerfile, such as COPY, RUN, or CMD, will be executed in this directory.
 
     It’s important to note that the WORKDIR instruction creates the directory if it does not already exist. And the subsequent COPY and ADD commands will be executed relative to the WORKDIR specified.
 
 3. COPY
+
     Use the COPY instruction to copy local files from the host machine to the current working directory. For example, to copy a file named package.json from the host machine’s current directory to the image’s /app directory, you would use the following command:
 
     COPY package.json /app/
