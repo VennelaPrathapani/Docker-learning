@@ -78,7 +78,9 @@ Docker File Building from Scratch
 
 Build Docker Image
 
-    docker build -t <image_name>
+    docker build -t <image_name> .
+
+    "." represents in the same directory.
 
     "-t" is used for tag name.
 
@@ -86,7 +88,7 @@ Verify Docker Image
 
     docker images
 
-Tag the imagename sing this command
+Tag the imagename using this command
 
     docker tag imagename:tag username/imagename:tag
 
